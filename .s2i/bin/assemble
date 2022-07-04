@@ -6,6 +6,14 @@ pushd /tmp/src || exit 1
 
 echo "---> Building your Ruby application from source ..."
 if [ -f Gemfile ]; then
+  if [ -n "$BUNDLE_REBUILD" ]; then
+    # Ignore a Gemfile.lock if it exists ...
+    if [ -f Gemfile.lock ]; then
+      echo "---> Ignoring 'Gemfile.lock' ..."
+      rm -f Gemfile.lock
+    fi
+  fi
+
   ADDTL_BUNDLE_ARGS="--retry 2"
   if [ -f Gemfile.lock ]; then
     # This is new in version 3.0
