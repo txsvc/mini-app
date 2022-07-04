@@ -15,30 +15,35 @@ Possible future add-ons:
 
 * [prometheus_exporter](https://github.com/thoughtbot/prometheus_exporter) for collecting and aggregating prometheus metrics
 
+
 ## Build and deploy
 
-See the [README.md](config/deployment/README.md) for details.
+See the [config/deployment](config/deployment) for details.
+
 
 ## References
 
 * [Ruby runtimes on Google App Engine](https://cloud.google.com/appengine/docs/standard/ruby/runtime)
 * [sclorg/rails-ex](https://github.com/sclorg/rails-ex) deployment on Red Hat OpenShift
 
-## Setup
 
-### Initial creation
+## Other
+
+### Setup
+
+#### Initial creation
 
 ```shell
 rails new . --minimal --skip-active-record
 ```
 
-### Checks before committing
+#### Checks before committing
 
 ```shell
 bundler exec rubocop -a
 ```
 
-### Credentials etc ...
+#### Credentials etc ...
 
 ```shell
 bundler rails credentials:edit
