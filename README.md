@@ -1,6 +1,6 @@
 # README
 
-'mini-app' is the base Rails application used at txs.vc. It is so `mini`, it does not even use a database !
+'mini-app' is a base Rails application that is so `mini`, it does not even use a database !
 
 It includes application gems like:
 
@@ -14,6 +14,29 @@ And development gems like:
 Possible future add-ons:
 
 * [prometheus_exporter](https://github.com/thoughtbot/prometheus_exporter) for collecting and aggregating prometheus metrics
+
+## Build and deploy
+
+### OpenShift build and deployment
+
+Required build ENV settings:
+
+* RAILS_MASTER_KEY: prevents that a new `master.key` is created during the app build
+
+Optional build ENV settings:
+
+* BUNDLE_REBUILD: ignore a `Gemfile.lock` file if present.
+* BUNDLE_WITHOUT: exclude e.g. `development` or `test` gems
+
+Required run ENV settings:
+
+* RAILS_MASTER_KEY: without a master.key, RAILS will fail to load it's secrets ...
+
+Optional run ENV settings:
+
+* RAILS_SERVE_STATIC_FILES
+* RAILS_MAX_THREADS
+* RAILS_MIN_THREADS
 
 ## References
 
@@ -31,5 +54,12 @@ rails new . --minimal --skip-active-record
 ### Checks before committing
 
 ```shell
-bundle exec rubocop -a
+bundler exec rubocop -a
+```
+
+### Credentials etc ...
+
+```shell
+bundler rails credentials:edit
+
 ```
