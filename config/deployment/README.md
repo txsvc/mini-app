@@ -7,6 +7,10 @@
 * Make a copy of `build_webhook_secrets.example.yaml` with name `build_webhook_secrets.yaml`. 
 * Make a copy of `secrets.example.yaml` with name `secrets.yaml`. 
 
+*WARNING:* make sure that above files DO NOT get comitted !
+
+#### Parameters
+
 Required build ENV settings:
 
 * RAILS_MASTER_KEY: prevents that a new `master.key` is created during the app build
@@ -23,8 +27,9 @@ Required run ENV settings:
 Optional run ENV settings:
 
 * RAILS_SERVE_STATIC_FILES
-* RAILS_MAX_THREADS
-* RAILS_MIN_THREADS
+* RAILS_MIN_THREADS: Default == 5
+* RAILS_MAX_THREADS: Default == max_threads_count
+* PORT: Only set/change if you are REALLY sure you know what you are doing. (default == 8080)
 
 
 ### Create a namespace

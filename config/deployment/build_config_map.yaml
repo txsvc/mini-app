@@ -6,3 +6,5 @@ metadata:
     app-owner: mini-app
 data:
   bundle-rebuild: x
+  #ENV['BUNDLE_WITHOUT']
+  #bundle-without: 'test:development'

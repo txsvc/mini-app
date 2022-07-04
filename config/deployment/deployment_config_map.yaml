@@ -5,4 +5,8 @@ metadata:
   labels:
     app-owner: mini-app
 data:
+  # ENV['RAILS_SERVE_STATIC_FILES']
   rails-serve-static-files: x
+  #RAILS_MIN_THREADS
+  #RAILS_MAX_THREADS
+  #PORT
