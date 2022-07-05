@@ -41,17 +41,17 @@ oc new-project <your_project_name>
 ### Deployment
 
 ```shell
+
 # secrets
 oc apply -f build_webhook_secrets.yaml
 oc apply -f secrets.yaml
 
-# config
-oc apply -f build_config_map.yaml
-
 # build
+oc apply -f build_config_map.yaml
 oc apply -f build_config.yaml
 
 # deploy
+oc apply -f deployment_config_map.yaml
 oc apply -f deployment_config.yaml
 
 ```

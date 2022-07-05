@@ -1,6 +1,6 @@
 # README
 
-'mini-app' is a base Rails application that is so `mini`, it does not even use a database !
+'mini-app' is a minimal rails app that is so `mini`, it does not even use a database !
 
 It includes application gems like:
 
@@ -18,7 +18,7 @@ Possible future add-ons:
 
 ## Build and deploy
 
-See the [config/deployment](config/deployment) for details.
+See [config/deployment](config/deployment) for details.
 
 
 ## References
