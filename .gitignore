@@ -27,3 +27,4 @@ hack/**
 /config/master.key
 secrets.yaml
 *_secrets.yaml
+app.yaml
