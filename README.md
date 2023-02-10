@@ -45,7 +45,14 @@ bundler exec rubocop -a
 
 #### Credentials etc ...
 
+Create `credentials.yml.enc`
+
 ```shell
 bundler rails credentials:edit
+```
 
+Edit `credentials.yml.enc`
+
+```shell
+EDITOR="nano" rails credentials:edit
 ```

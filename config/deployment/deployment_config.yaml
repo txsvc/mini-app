@@ -11,7 +11,6 @@ items:
         app.kubernetes.io/instance: mini-app
         app.kubernetes.io/name: mini-app
         app.openshift.io/runtime: ruby
-        app.openshift.io/runtime-version: 3.0-ubi7
     spec:
       strategy:
         type: Rolling
@@ -97,7 +96,6 @@ items:
         app.kubernetes.io/instance: mini-app
         app.kubernetes.io/name: mini-app
         app.openshift.io/runtime: ruby
-        app.openshift.io/runtime-version: 3.0-ubi7
     spec:
       ipFamilies:
         - IPv4
@@ -124,7 +122,6 @@ items:
         app.kubernetes.io/instance: mini-app
         app.kubernetes.io/name: mini-app
         app.openshift.io/runtime: ruby
-        app.openshift.io/runtime-version: 3.0-ubi7
     spec:
       to:
         kind: Service
