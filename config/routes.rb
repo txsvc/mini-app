@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'landing#index'
 
   # static pages have to be explicitly be mentioned due to the catch-all rule below
+  get 'pages/about' => 'high_voltage/pages#show', id: 'about'
   get 'pages/imprint' => 'high_voltage/pages#show', id: 'imprint'
   get 'pages/privacy' => 'high_voltage/pages#show', id: 'privacy'
 
