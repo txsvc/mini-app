@@ -18,7 +18,6 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-
 /public/assets
 hack/**
 
