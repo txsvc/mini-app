@@ -10,26 +10,16 @@ module ApplicationHelper
   end
 
   def signed_in?
-    return false if cookies[:current_user].nil?
+    return true unless session[:user_id].nil?
 
-    true
-  end
-
-  def current_user
-    return nil if cookies[:current_user].nil?
-
-    cookies.encrypted[:current_user]
+    false
   end
 
   def current_user_id
-    return nil if cookies[:current_user].nil?
-
-    JSON.parse(cookies.encrypted[:current_user])[0]
+    session[:user_id]
   end
 
   def current_user_email
-    return nil if cookies[:current_user].nil?
-
-    JSON.parse(cookies.encrypted[:current_user])[1]
+    session[:user_email]
   end
 end

@@ -13,3 +13,6 @@ env_variables:
   RAILS_ENV: "production"
   RAILS_MASTER_KEY: "e8..."
   RAILS_SERVE_STATIC_FILES: true
+  # OAuth
+  GITHUB_KEY: 'abc'
+  GITHUB_SECRET: 'xxx'

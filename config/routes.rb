@@ -6,10 +6,18 @@ Rails.application.routes.draw do
   # the default route
   root 'landing#index'
 
+  # login & protected page
+  get 'login' => 'sessions#index'
+  get 'dashboard' => 'dashboard#index'
+
   # static pages have to be explicitly be mentioned due to the catch-all rule below
   get 'pages/about' => 'high_voltage/pages#show', id: 'about'
   get 'pages/imprint' => 'high_voltage/pages#show', id: 'imprint'
   get 'pages/privacy' => 'high_voltage/pages#show', id: 'privacy'
+
+  # OAuth etc
+  get 'auth/github/callback', to: 'sessions#create_github'
+  get '/logout', to: 'sessions#logout'
 
   # catch all
   match '*unmatched', to: 'errors#page_not_found', via: :all

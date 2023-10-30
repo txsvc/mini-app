@@ -23,6 +23,9 @@ gem 'high_voltage', '~> 3.1'
 # for deployment on Google App Engine
 # gem 'appengine'
 
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+gem 'omniauth-rails_csrf_protection'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
