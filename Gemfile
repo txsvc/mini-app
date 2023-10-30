@@ -22,6 +22,7 @@ gem 'high_voltage', '~> 3.1'
 
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem 'omniauth-google-oauth2', '~> 1.1'
+gem 'omniauth-discord'
 gem 'omniauth-rails_csrf_protection'
 
 group :development, :test do

@@ -11,8 +11,11 @@ module ApplicationHelper
 
   def signed_in?
     return true unless session[:user_id].nil?
-
     false
+  end
+
+  def oauth_provider
+    session[:provider]
   end
 
   def current_user_id

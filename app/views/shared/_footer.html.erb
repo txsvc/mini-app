@@ -8,7 +8,7 @@
       <% if signed_in? %>
         <%= link_to 'Logout', logout_path, class: '' %>
       <% end %>
-      <%= session.id %>/<%= current_user_id %>/<%= current_user_email %>
+      <%= session.id %>@<%= current_user_id %>/<%= current_user_email %> via. <%= oauth_provider %>
     </div>
   </div>
 </div>

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   # OAuth etc
   get 'auth/github/callback', to: 'sessions#create_github'
+  get 'auth/discord/callback', to: 'sessions#create_discord'
   get 'auth/google_oauth2/callback', to: 'sessions#create_google'
   get '/logout', to: 'sessions#logout'
 

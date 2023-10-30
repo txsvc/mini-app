@@ -16,5 +16,7 @@ env_variables:
   # OAuth
   GITHUB_KEY: 'github'
   GITHUB_SECRET: 'xxx'
-  GOOGLE_CLIENT_ID: 'xxx.googleusercontent.com'
+  GOOGLE_CLIENT_ID: 'google'
   GOOGLE_CLIENT_SECRET: 'xxx'
+  DISCORD_CLIENT_ID: 'discord'
+  DISCORD_CLIENT_SECRET: 'xxx'
