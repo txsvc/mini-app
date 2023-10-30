@@ -14,5 +14,7 @@ env_variables:
   RAILS_MASTER_KEY: "e8..."
   RAILS_SERVE_STATIC_FILES: true
   # OAuth
-  GITHUB_KEY: 'abc'
+  GITHUB_KEY: 'github'
   GITHUB_SECRET: 'xxx'
+  GOOGLE_CLIENT_ID: 'xxx.googleusercontent.com'
+  GOOGLE_CLIENT_SECRET: 'xxx'

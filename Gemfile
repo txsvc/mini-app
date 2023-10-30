@@ -14,9 +14,6 @@ gem 'sprockets-rails'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.6'
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
 # mini-app application gems
 gem 'high_voltage', '~> 3.1'
 
@@ -24,6 +21,7 @@ gem 'high_voltage', '~> 3.1'
 # gem 'appengine'
 
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+gem 'omniauth-google-oauth2', '~> 1.1'
 gem 'omniauth-rails_csrf_protection'
 
 group :development, :test do
